@@ -1,0 +1,135 @@
+:root  {
+--primary-color: rgb(236,236,236);
+--secondary-color: rgb(21, 21, 21);
+--blue-color:#2bc5cd;
+--orange-color: #ff693d;
+--border: 4px solid;
+font-family: Arial, Helvetica, sans-serif;}
+
+* {margin: 0;
+padding: 0;
+box-sizing: border-box;
+width: 100%;
+height: 100svh}
+/* Resto del CSS */
+body.container 
+{display: grid; 
+    margin: 0;
+    width:980px;
+    height:100svh;
+    min-width: 970px;
+    min-height: 970px;
+grid-template-columns: repeat(2,1fr,2fr);
+grid-template-rows: repeat(2,2fr,1fr);
+gap: 20px;}
+
+header {width: 300px;
+    height: 600px;
+    text-align: center;
+
+background-color:var(--blue-color);
+grid-row: 1/2;
+grid-column: 1/2;
+}
+h1{ font-family: Arial, Helvetica, sans-serif;  
+    color: whitesmoke;
+    font-size: 20px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+p{ font-size: 15px;
+color: var(--primary-color);}
+
+main {display: grid;
+    grid-template-rows: (1fr,1fr);
+    grid-template-columns: (1fr,1fr);
+    flex-basis: 300px;
+    width: 630px;
+    height: 630px;   
+    justify-items: center; 
+    align-items: center;
+    gap: 15px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+}
+h2 {color: var(--blue-color);
+    padding: 50px;
+    margin: 8px;
+    width: 300px;
+    height: 300px;
+   border : var(--border)var(--blue-color);
+    text-align: center;
+grid-row: 2/2;
+grid-column: 1/2;}
+.school  { width: 300px;
+    height: 300px;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+}
+
+.student {width: 300px;
+    height: 300px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+}
+.time { display:block;
+    width: 300px;
+    height: 300px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+}
+
+.alumni {
+    grid-row: 2/3;
+    grid-column: 1/2;
+background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+}
+
+.alumni,
+.school,
+.student,
+.time {
+background-size: cover;
+max-height: 300px;
+max-width: 300px;
+}
+ 
+h3 {color:var(--primary-color);
+height: 100px;}
+.pepa { height: 100px; 
+    color:var(--primary-color);}
+div {height: 100px;}
+button{background-color: var(--primary-color); 
+    width: 120px;
+    border-radius: 15px; 
+height :30px;
+cursor: pointer;
+ border-color: black;
+border: 2px solid;
+box-shadow: 15px;}
+
+button:hover {background-color: red;
+    transition-duration:  0.5s ;
+scale: 1.6;}
+footer {color: var(--primary-color);
+    padding-left: 20px;
+    align-items: center;
+     width: 630px;
+    height: 300px;
+background-color : var(--orange-color);
+grid-row: 2/3;
+grid-column: 2/3}
+@media (max-width: 600px)
+{
+ main{display:flex;
+    flex-direction: column;
+    width: 320px;height: auto;}
+    footer{ width: 320px}
+}
+
+@media (max-width: 300px) {
+ body.container {display:block;
+    width: 300px;}  
+}
