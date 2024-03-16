@@ -51,8 +51,9 @@ height: auto;
 grid-row: 1/3;
 grid-column: 2/4;
     gap: 20px; 
-    margin: 20px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-}
+    margin: 20px;
+margin-bottom:0px;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
 h2 {color: var(--blue-color);
     padding: 50px;
     margin: 8px;
@@ -89,6 +90,7 @@ background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773
     height:auto;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     grid-row: 3/4;
     grid-column: 1/2;
 background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
@@ -108,10 +110,10 @@ max-height: 400px;*/
  
 h3 {color:var(--primary-color);
     text-align: center;
-height: 100px;}
+height: 70px;}
 .pepa { height: 100px; 
     color:var(--primary-color);}
-div {height: 100px;}
+div {height: 50px;}
 button{background-color: var(--primary-color); 
     width: 120px;
     border-radius: 15px; 
@@ -119,7 +121,8 @@ height :30px;
 cursor: pointer;
  border-color: black;
 border: 2px solid;
-box-shadow: 15px;}
+box-shadow: 15px;align-items: end;
+}
 
 button:hover {background-color: red;
     transition-duration:  0.5s ;
@@ -135,20 +138,85 @@ background-color : var(--orange-color);
 grid-row: 3/4;
 grid-column: 2/4;
 gap:20px}
+@media(max-width:600px)
+{body.container {width:100%;
+height:auto;}}
 @media (max-width: 600px) and (min-width:300px)
-{
- main{display:block;
-
-    width:250px;
-    height: 200px;}
+{body.container{grid-template-columns:repeat(2,1fr);
+grid-template-rows: repeat(5,1fr);}
+    header{max-width: 280px;
+height: 600px;
+object-position: center;
+object-fit: cover;
+text-align: center;
+grid-row: 1/3;
+grid-column: 1/2;}
+ main{grid-template-columns:(1,1fr);
+    grid-template-rows: repeat(4,1fr);
+    width:280px;
+grid-row: 1/5;
+grid-column: 2/3;}
+.school{grid-row: 1/2;}
+.student{grid-row: 3/4;
+grid-column: 1/2;}
+.h2{grid-row: 2/3;}
+.time{grid-row: 4/5;
+grid-column: 1/2;}
+ section {
+object-fit: cover;
+object-position: center;}
+    .alumni{width: 300px;
+    height: 300px;
+grid-row: 3/4;
+grid-column: 1/2;}
   footer {
-width: 250px;
-height: auto;
-position: relative;}
+width: 300px;
+height:300px;
+grid-row: 4/5;
+grid-column: 1/2;
+object-fit: cover;}
+.pepa{font-size: 12px;
+align-items: center;}
 }
 @media (max-width: 300px) {
- body.container{display:block;
-    position: relative;
-    width:250px;
-height: auto;}  
+ body.container{grid-template-columns:1;
+    grid-template-rows: repeat(7,1fr);
+width: 300px;
+height:auto;
+    object-fit: cover;
+    object-position:center;
+    align-items: center;}
+    header{width: 300px;
+        height: 600px;
+grid-row: 1/3;}
+main{
+grid-row: 2/6;
+grid-column: 1/2;}
+.school{width: 300px;
+    height: 300px;
+    grid-row:  2/3;
+grid-column: 1/2;}
+h2{width: 300px;
+    height: 300px;
+    grid-row: 3/4;
+grid-column: 1/2;}
+.student{width: 300px;
+    height: 300px;
+    grid-row: 4/5;
+grid-column: 1/2;}
+.time { width: 300px;
+    height: 300px;
+    grid-row:5/6;
+grid-column: 1/2;}
+.alumni {width: 300px;
+    height: 300px;
+    grid-row: 6/7;
+grid-column: 1/2;}
+footer {width: 300px;
+    height: 300px;
+    grid-row: 7/8;
+grid-column:1/2;
+align-items: center;}
+.pepa{
+font-size:10px;}
 }
