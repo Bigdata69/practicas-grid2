@@ -138,10 +138,10 @@ background-color : var(--orange-color);
 grid-row: 3/4;
 grid-column: 2/4;
 gap:20px}
-@media(max-width:600px)
+@media(max-width:481px)
 {body.container {width:100%;
 height:auto;}}
-@media (max-width: 600px) and (min-width:300px)
+@media (max-width: 480px) and (min-width:320px)
 {body.container{grid-template-columns:repeat(2,1fr);
 grid-template-rows: repeat(5,1fr);}
     header{max-width: 280px;
@@ -178,7 +178,7 @@ object-fit: cover;}
 .pepa{font-size: 12px;
 align-items: center;}
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
  body.container{grid-template-columns:1;
     grid-template-rows: repeat(7,1fr);
 width: 300px;
